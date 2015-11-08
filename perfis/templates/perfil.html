@@ -3,14 +3,14 @@
 {% block body %}
 <div class="row">
   <div class="col-lg-12" thumbnail>
-    
+
       <ul>
-          <li>Flavio Almeida</li>
-          <li>flavio@flavio.com.br</li>
-          <li>Nome Empresa</li>
-          <li>Telefone</li>
+          <li>{{perfil.nome}}</li>
+          <li>{{perfil.email}}</li>
+          <li>{{perfil.nome_empresa}}</li>
+          <li>{{perfil.telefone}}</li>
       </ul>
-      <a href="#">Convidar</a>
+      <a href="{% url 'convidar' perfil.id %}">convidar</a>
     </div>
 </div>
 {% endblock %}
