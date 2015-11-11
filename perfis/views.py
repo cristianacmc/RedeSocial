@@ -8,7 +8,7 @@ def exibir(request, perfil_id):
     perfil = Perfil.objects.get(id=perfil_id)
     perfil_logado = get_perfil_logado(request)
     ja_eh_contato = perfil in perfil_logado.contato.all()
-    return render(request, 'perfil.html', {"perfil": perfil, 'perfil_logado': get_perfil_logado(request)})
+    return render(request, 'perfil.html', {'perfil': perfil, 'ja_eh_contato': ja_eh_contato})
 
 def convidar(request, perfil_id):
     #import pdb; pdb.set_trace()
